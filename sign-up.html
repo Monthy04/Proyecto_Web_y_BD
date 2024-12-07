@@ -8,7 +8,7 @@
 	<style>
 		.Contenedor_Formulario{
 			width:50%;
-			height:50%;
+			height:60%;
 			background-image :url('img/Nebula_Red.png'); 
 			border:2px;
 			border-color:white;
@@ -68,9 +68,9 @@
 		
 		<nav class="Navegación">
 			<ul>
-				<li><a href="game.html">Jugar</a></li>
+				<li><a href="https://monthy04.itch.io/heavensward">Jugar</a></li>
 				<li><a href="gameplay.html">Gameplay</a></li>
-				<li><a href="stats.html">Estadísticas</a></li>
+				<li><a href="stats.php">Estadísticas</a></li>
 				<li><a href="login.html">Login</a></li>
 			</ul>
 		</nav>
@@ -78,7 +78,7 @@
 	
 	<main class="Contenido_Principal" style="display: grid;place-items: center">
 		<div class="Contenedor_Formulario">
-			<form class="Formulario">
+			<form class="Formulario" action="Registrar_Usuario.php" method="post">
 				<h1 style="margin-top:0px">Registrarse</h1>
 		 		<label for="Usuario"><b>Usuario:</b></label>
 		 		<input required type="text" id="Usuario" name="Usuario">
@@ -88,8 +88,11 @@
 		 		<br>
 		 		<label for="ConfirmPassword"><b>Confirmar Contraseña:</b></label>
 		 		<input required type="password" id="ConfirmPassword" name="ConfirmPassword">
-		 		<br>		 		
-		 		<button type="submit">Registrar Usuario</button>	 		
+		 		<br>
+		 		<label for="Correo"><b>Correo Electrónico:</b></label>
+		 		<input required type="email" id="Correo" name="Correo">
+		 		<br>		 				 		
+		 		<button type="submit" value="submit">Registrar Usuario</button>	 		
 		 	</form>	
 		 	<div>
 		 		<img id="Imagen_Formulario" src="" alt="Ships">;

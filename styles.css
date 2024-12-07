@@ -199,7 +199,13 @@ padding-top:10px;
 	width:100px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
+  	width: 100%;
+  	padding: 5px;
+  	margin: 5px 0 22px 0;
+  	border: none; 
+}
+
   	width: 100%;
   	padding: 5px;
   	margin: 5px 0 22px 0;

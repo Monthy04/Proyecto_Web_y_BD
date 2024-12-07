@@ -2,6 +2,8 @@
 	margin:5px;
 }
 
+
+
 .Galeria_Fila:after{
 	content:"";
 	display:table;
