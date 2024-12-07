@@ -5,6 +5,7 @@
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 	<title>Heavensward</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
+	<link href="Styles_Galeria.css" rel="stylesheet" type="text/css">
 	<style>
 		.Logo{
 			background-image:url('img/Nebula_Blue.png'); 
@@ -37,7 +38,7 @@
 		</nav>
 	</div>
 	
-	<div class="Contenido_Principal">
+	<main class="Contenido_Principal">
 		<section class="Logo">
 			<img src="img/Logo_1.png" alt="Logo" style="padding-top:50px">
 
@@ -112,19 +113,65 @@
 		</section>
 		
 		<section>
-		&nbsp
+		&nbsp;
 			<div class="Contenedor_Texto">
 				<img src="img/Recuadro_Az.png" alt="" style="width:320px; height:80px">								
 				<div class="Centro_Contenedor" style="color:blue;font-size:30px">Galeria</div>
 			</div>
+			<div class="Galeria">
+				<div class="Galeria_Fila">
+					<div class="Galeria_Columna">
+						<img src="img/Spaceships.png" alt="Spaceships" onclick="Abrir_Modal();Diapositva_Actual(1);" class="hover-shadow" style="width:100%" role="button"">	
+					</div>
+					<div class="Galeria_Columna">
+						<img src="img/Spaceships.png" alt="Logo" onclick="Abrir_Modal();Diapositva_Actual(2);" class="hover-shadow" style="width:100%">				
+					</div>
+					<div class="Galeria_Columna">
+						<img src="img/Spaceships.png" alt="Spaceships" onclick="Abrir_Modal();Diapositva_Actual(3);" class="hover-shadow" style="width:100%">	
+					</div>
+					
+					<div class="Galeria_Columna">
+						<img src="img/Spaceships.png" alt="Spaceships" onclick="Abrir_Modal();Diapositva_Actual(3);" class="hover-shadow" style="width:100%">	
+					</div>	
+				</div>
+			</div>
+			
+			
+			<div id="Galeria_Modal" class="Modal">
+				<span class="Boton_Cerrar" onClick="Cerrar_Modal()">&times;</span>
+				<div class="Contenido_Modal">
+				
+					<div class="Diapositivas">
+						<img src="img/Spaceships.png" alt="Spaceships" style="width:100%">
+					</div>
+					
+					<div class="Diapositivas">
+						<img src="img/Spaceships.png" alt="Logo" style="width:100%">
+					</div>
+					
+					<div class="Diapositivas">
+						<img src="img/Spaceships.png" alt="Spaceships" style="width:100%">
+					</div>
+					
+					<div class="Diapositivas">
+						<img src="img/Spaceships.png" alt="Spaceships" style="width:100%">
+					</div>
+					
+					<a class="Galeria_Anterior" onclick="Cambiar_Diapositiva(-1)">&larr;</a>
+					<a class="Galeria_Siguente" onclick="Cambiar_Diapositiva(1)">&rarr;</a>
+					<div class="Contenedor_Subtitulo">
+				    <p id="DiapositivaNum"></p>
+				    </div>
+								
+				</div>
+			</div>
+			<script src="Galeria_Modal.js"></script>
 		</section>
-	</div>
-	
-	<div class="BarraPiePagina">
-		<footer class="Pie_Pagina">
-			© 2024 Christian Dael Silis Silvestre. Todos los derechos reservados		
-		</footer>
-	</div>
+	</main >
+
+	<footer class="Pie_Pagina">
+		© 2024 Christian Dael Silis Silvestre. Todos los derechos reservados		
+	</footer>
 	
 </body>
 

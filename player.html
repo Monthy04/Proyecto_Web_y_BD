@@ -5,6 +5,45 @@
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 	<title>Información Jugador</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
+	<style>
+		h1{
+			color:white;
+		}
+	
+		.Tabla_Estadisticas th
+		{
+			text-align:left;
+			font-size:large;
+			width:50%;
+		}
+		
+		.Informacion{
+			background-image:url('img/Nebula_Blue.png');
+		}
+
+				
+		.Contenedor_Informacion h1
+		{
+			font-size:xx-large;
+		}
+		
+		.Contenedor_Informacion p
+		{
+			font-size:x-large;
+			margin:10px;		}
+				
+		.Tabla_Estadisticas
+		{
+			width:50%;
+		}
+
+		
+		.Tabla_Estadisticas td
+		{
+			width:20%;
+		}
+		
+	</style>
 </head>
 
 <body class="Contenedor_Principal">
@@ -23,18 +62,136 @@
 		</nav>
 	</div>
 	
-	<div class="Contenido_Principal">
- 
+	<main class="Contenido_Principal" style="display: grid;place-items: center">
 	
+		<div style="width:70%;height: 85%">
+			<aside class="Barra_Lateral">
+				<a onclick="Mostrar_Seccion(0)">Introducción</a>
+				<a onclick="Mostrar_Seccion(1)">Explorador</a>
+				<a onclick="Mostrar_Seccion(2)">Interceptor</a>
+				<a onclick="Mostrar_Seccion(3)">Trasportador</a>
+				<script src="gameplay_info.js"></script>
+			</aside>
+			
+			<section class="Informacion">
+				<div class="Contenedor_Informacion" style="display:block; text-align:left">
+					<h2 style="margin:10px">Movimiento</h2>
+					<p>El movimiento de la nave es controlado usando las teclas WASD.</p>
+					<p>La rotación es controlada por la dirección en la que se encuentra el puntero.</p>
+					<br>
+					<h2 style="margin:10px">Salud</h2>
+					<p>Cada nave tiene dos parametros de salud: Puntos de Casco y Puntos de Escudo.</p>
+					<p>
+						Los puntos de escudo se regeneran automaticamente, y son los primeros que reciben daño.
+						Si se recibe daño y no se tienen puntos de escudo, los puntos de casco disminuyen.
+						Si pierdes todos los puntos de casco la partida terminará.
+					</p>
+					<p>Las barras de la parte superior de la pantalla indican la cantidad de puntos de casco (barra roja) y escudo (barra azul)</p>
+					<br>
+					<h2 style="margin:10px">Habilidades</h2>
+					<p>Cada nave tiene dos habilidades. Estas son activadas usando los botones del mouse.</p>
+					<p>
+						Las habilidades solo pueden ser activadas cada cierto tiempo, este tiempo esta representado con las barras
+						blancas a los laterales de las barras de salud.
+					</p>
+				</div>
 	
-	</div>
-
+				<div class="Contenedor_Informacion">
+					<h1>Explorador</h1>
+					<img src="img/Explorer.png" alt="Explorer Ship">
+					<p>Nave ligera de gran maniobrabilidad, cuenta con poca armadura y escudos débiles que se recargan rápidamente.</p>
+					<div style="display: grid; place-items: center">
+						<table class="Tabla_Estadisticas">
+							<tr>
+								<th>Puntos de Armadura:</th>
+								<td>50</td>
+							</tr>
+							<tr>
+								<th>Puntos de Escudo:</th>
+								<td>100</td>
+							</tr>
+							<tr>
+								<th>Tiempo de recarga de escudo:</th>
+								<td>4 seg</td>
+							</tr>
+							<tr>
+								<th>Velocidad de recarga de escudo:</th>
+								<td>20 pts/seg</td>
+							</tr>
+							<tr>
+								<th>Velocidad de movimiento:</th>
+								<td>140 u</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+				<div class="Contenedor_Informacion">
+					<h1>Interceptor</h1>
+					<img src="img/Interceptor.png" alt="Interceptor Ship">
+					<p>Nave mediana con maniobrabilidad estándar, cuenta con armadura decente y escudos normales con una velocidad de recarga normal.</p>
+					<div style="display: grid; place-items: center">
+						<table class="Tabla_Estadisticas">
+							<tr>
+								<th>Puntos de Armadura:</th>
+								<td>100</td>
+							</tr>
+							<tr>
+								<th>Puntos de Escudo:</th>
+								<td>150</td>
+							</tr>
+							<tr>
+								<th>Tiempo de recarga de escudo:</th>
+								<td>6 seg</td>
+							</tr>
+							<tr>
+								<th>Velocidad de recarga de escudo:</th>
+								<td>15 pts/seg</td>
+							</tr>
+							<tr>
+								<th>Velocidad de movimiento:</th>
+								<td>100 u</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+				<div class="Contenedor_Informacion">
+					<h1>Transportador</h1>
+					<img src="img/Transport.png" alt="Transport Ship">
+					<p>Nave de gran tamaño con poca maniobrabilidad, cuenta con una gran cantidad de armadura y escudos fuertes que se recargan lentamente.</p>
+					<div style="display: grid; place-items: center">
+						<table class="Tabla_Estadisticas">
+							<tr>
+								<th>Puntos de Armadura:</th>
+								<td>150</td>
+							</tr>
+							<tr>
+								<th>Puntos de Escudo:</th>
+								<td>200</td>
+							</tr>
+							<tr>
+								<th>Tiempo de recarga de escudo:</th>
+								<td>8 seg</td>
+							</tr>
+							<tr>
+								<th>Velocidad de recarga de escudo:</th>
+								<td>10 pts/seg</td>
+							</tr>
+							<tr>
+								<th>Velocidad de movimiento:</th>
+								<td>60 u</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main >
 	
-	<div class="BarraPiePagina">
-		<footer class="Pie_Pagina">
-			© 2024 Christian Dael Silis Silvestre. Todos los derechos reservados		
-		</footer>
-	</div>
+	<footer class="Pie_Pagina">
+		© 2024 Christian Dael Silis Silvestre. Todos los derechos reservados		
+	</footer>
 	
 </body>
 

@@ -5,6 +5,47 @@
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 	<title>Información Enemigos</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
+	<style>
+		h1{
+			color:white;
+		}
+	
+		.Tabla_Estadisticas th
+		{
+			text-align:left;
+			font-size:large;
+			width:50%;
+		}
+		
+		.Informacion{
+			background-image:url('img/Nebula_Red.png');
+		}
+		
+		.Contenedor_Informacion h1
+		{
+			font-size:xx-large;
+		}
+		
+		.Contenedor_Informacion p
+		{
+			font-size:x-large;
+			margin:25px;
+			line-height: 1.5;		
+		}
+				
+		.Tabla_Estadisticas
+		{
+			width:50%;
+		}
+
+		
+		.Tabla_Estadisticas td
+		{
+			width:20%;
+		}
+		
+	</style>
+
 </head>
 
 <body class="Contenedor_Principal">
@@ -23,18 +64,97 @@
 		</nav>
 	</div>
 	
-	<div class="Contenido_Principal">
- 
-	
-	
-	</div>
+	<main class="Contenido_Principal" style="display: grid;place-items: center">
+		<div style="width:70%;height: 85%">
+			<aside class="Barra_Lateral">
+				<a onclick="Mostrar_Seccion(0)">Stalker</a>
+				<a onclick="Mostrar_Seccion(1)">Sniper</a>
+				<a onclick="Mostrar_Seccion(2)">Repulsor</a>
+				<a onclick="Mostrar_Seccion(3)">Lanzador</a>
+				<a onclick="Mostrar_Seccion(4)">Lanza-Drones</a>
+				<a onclick="Mostrar_Seccion(5)">Dron Hacker</a>
+				<a onclick="Mostrar_Seccion(6)">Dron Inmovilizador</a>
+				<script src="gameplay_info.js"></script>
+			</aside>
+			
+			<section class="Informacion">
+			
+				<div class="Contenedor_Informacion" style="display:block">
+					<h1>Stalker</h1>
+					<img src="img/Stalker.png" alt="Stalker">
+					<p>
+						El enemigo básico del juego.<br><br>
+						Utiliza un cristal para atacar a corta distancia, el cual causa daño al jugador mientras se encuentre cerca de este.<br><br>
+						Al ser destruido hay una probabilidad de el cristal permanezca intacto por un breve periodo de tiempo, lo cual provocara que otros enemigos también reciban daño por parte del cristal.
+					</p>
+				</div>
+				
+				<div class="Contenedor_Informacion">
+					<h1>Sniper</h1>
+					<img src="img/Sniper.png" alt="Sniper">
+					<p>
+						Realiza ataques a larga distancia, cargando un rayo de energía el cual paralizara al jugador por unos segundos si es impactado por este. <br><br>
+						En caso de que el rayo impacte a un enemigo, este perderá energía totalmente y explotara.<br><br>
+						Este siempre intentara mantenerse alejado del jugador, por lo cual huira si el jugador se acerca demasiado.
+					</p>
+				</div>
+				
+				<div class="Contenedor_Informacion">
+					<h1>Repulsor</h1>
+					<img src="img/Repulsor.png" alt="Repulsor">
+					<p>
+						Si se encuentra demasiado cerca del jugador utiliza una habilidad que crea una onda de fuerza de corto alcance que empuja todo objeto que este frente de el.<br><br>
+						Si el jugador se encuentra dentro del rango de la onda de fuerza entonces sufrirá daño.
+					</p>
+				</div>
+				
+				<div class="Contenedor_Informacion">
+					<h1>Lanzador</h1>
+					<img src="img/Launcher.png" alt="Lanzador">
+					<p>
+						Ataca al jugador lanzando un solo objeto hacia el, una vez el objeto sea lanzado (o en caso de que este sea destruido) este enemigo escapara del mapa.<br><br>
+						Para lanzar el objeto se tiene que mantener contacto visual con el jugador durante un breve periodo de tiempo, 
+						después de esto el Lanzador permanecerá inmóvil durante un segundo para lanzar el objeto.
+					</p>
+				</div>
+				
+				<div class="Contenedor_Informacion">
+					<h1>Lanza-Drones</h1>
+					<img src="img/Dron_Launcher_Full.png" alt="Lanza-Drones">
+					<p>
+						Enemigo estacionario el cual una vez se encuentre en su posición objetivo desplegará drones enemigos cada cierto tiempo.<br><br>
+						Tiene un limite de despliegue de 2 drones de cada tipo activos al mismo tiempo.
+					</p>
+				</div>
+				
+				<div class="Contenedor_Informacion">
+					<h1>Dron Hacker</h1>
+					<img src="img/Hacker_Drone.png" alt="Dron Hacker">
+					<p>
+						Al estar a una corta distancia del jugador este atacará invirtiendo los controles de movimiento.<br><br>
+						Multiples drones de este tipo pueden atacar al jugador al mismo tiempo, por lo cual es posible que el efecto sea anulado al invertir controles 
+						de movimiento que ya se hayan sido invertidos previamente.
+					</p>
+				</div>
+				
+				<div class="Contenedor_Informacion">
+					<h1>Dron Inmovilizador</h1>
+					<img src="img/Inmovilizer_Drone.png" alt="Dron Inmovilizador">
+					<p>
+						Al estar a una corta distancia del jugador este atacará reduciendo ligeramente la velocidad de movimiento.<br><br>
+						Multiples drones de este tipo pueden atacar al jugador al mismo tiempo, por lo cual la velocidad de movimiento se vera reducida en medida 
+						de la cantidad de drones inmovilizadores que se encuentren cerca del jugador.
+					</p>
+				</div>
+
+			</section>
+		</div>
+	</main >
 
 	
-	<div class="BarraPiePagina">
-		<footer class="Pie_Pagina">
-			© 2024 Christian Dael Silis Silvestre. Todos los derechos reservados		
-		</footer>
-	</div>
+	<footer class="Pie_Pagina">
+		© 2024 Christian Dael Silis Silvestre. Todos los derechos reservados		
+	</footer>
 	
 </body>
 

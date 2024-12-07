@@ -3,13 +3,13 @@
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<title>Login</title>
+	<title>Registrarse</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
 	<style>
 		.Contenedor_Formulario{
 			width:50%;
 			height:50%;
-			background-image :url('img/Nebula_Blue.png'); 
+			background-image :url('img/Nebula_Red.png'); 
 			border:2px;
 			border-color:white;
 			border-style:solid; 
@@ -79,24 +79,24 @@
 	<main class="Contenido_Principal" style="display: grid;place-items: center">
 		<div class="Contenedor_Formulario">
 			<form class="Formulario">
-				<h1 style="margin-top:0px">Iniciar Sesión</h1>
+				<h1 style="margin-top:0px">Registrarse</h1>
 		 		<label for="Usuario"><b>Usuario:</b></label>
 		 		<input required type="text" id="Usuario" name="Usuario">
 		 		<br>
 		 		<label for="Password"><b>Contraseña:</b></label>
 		 		<input required type="password" id="Password" name="Password">
-		 		<br>	 		
-		 		<button type="submit">Ingresar Sesión</button>	 		
-		 		<a href="sign-up.html" style="color:white; text-decoration:none;margin-left:10px">Registrarse</a>
-		 	</form>
-		 	
+		 		<br>
+		 		<label for="ConfirmPassword"><b>Confirmar Contraseña:</b></label>
+		 		<input required type="password" id="ConfirmPassword" name="ConfirmPassword">
+		 		<br>		 		
+		 		<button type="submit">Registrar Usuario</button>	 		
+		 	</form>	
 		 	<div>
 		 		<img id="Imagen_Formulario" src="" alt="Ships">;
-		 	</div>	 	
+		 	</div>
 		</div>
 	</main >
 
-	
 	<footer class="Pie_Pagina">
 		© 2024 Christian Dael Silis Silvestre. Todos los derechos reservados		
 	</footer>
